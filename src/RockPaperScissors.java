@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class RockPaperScissors {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        //whole game is in while loop, so at the end user chooses if he/she wants to play again
+        //whole game is in a while loop, so at the end user chooses if he/she wants to play again
         while (true) {
             //generate computer's move
             String[] rps = {"r", "p", "s"};
