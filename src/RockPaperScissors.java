@@ -4,10 +4,13 @@ import java.util.Scanner;
 public class RockPaperScissors {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        //whole game is in while loop, so at the end user chooses if he/she wants to play again
         while (true) {
+            //generate computer's move
             String[] rps = {"r", "p", "s"};
             String computerMove = rps[new Random().nextInt(rps.length)];
 
+            //take input from a user
             String userMove;
             while (true) {
                 System.out.println("Enter your move (r, p or s): ");
@@ -18,6 +21,8 @@ public class RockPaperScissors {
                     System.out.println("Invalid move");
             }
             System.out.println("Computer played: " + computerMove);
+            
+            //compare user's and computer's move
             if (userMove.equals(computerMove))
                 System.out.println("Tie!");
             else if (userMove.equals("r")) {
@@ -36,6 +41,8 @@ public class RockPaperScissors {
                 else
                     System.out.println("You win!");
             }
+            
+            //ask if wanna play again
             System.out.println("Wanna play again? (y/n)");
             String playAgain = sc.nextLine();
             if (!playAgain.equals("y"))
